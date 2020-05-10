@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Equipment Position Monitoring
+        </title>
+
+        <style>
+            body{
+                background-color: #2b542c;
+            }
+    
+            h1{
+                  color: white;
+                  background-color:#4cae4c;
+                  width: 100%;
+                  float:left;
+                  height: 50px;
+            }
+    
+            input{
+                width: auto;
+                height: 60px;
+                text-align: center;
+                background-color: #1b6d85;
+                color: #ffffff;
+                font-size: 35px;
+            }
+              
+        </style>
+    </head>
+<body>
+    <h1>
+        Please Select the Video File : 
+    
+    </h1>
+   
+    <form action="/external/" method="post" >   
+        {% csrf_token %}       
+        <input type="file" name="fileupload" value="fileupload" id="fileupload"> <hr>
+        {{data_external}}<br><br>
+        {{data1}} <br><br>
+        <input type="Submit"  value="Submit"> <hr>
+     </form>
+
+</body>
+</html>
